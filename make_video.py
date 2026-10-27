@@ -21,9 +21,9 @@ if os.path.exists(".env"):
             os.environ.setdefault(k, v.strip().strip('"'))
 
 # 上から順に、APIで使えるものを自動で選ぶ（環境変数で上書き可）
-TEXT_MODELS  = ["gemini-3.1-pro", "gemini-3.1-pro-preview", "gemini-2.5-pro"]
-IMAGE_MODELS = ["gemini-3.1-flash-image", "gemini-3.1-flash-image-preview",
-                "gemini-3-pro-image-preview", "gemini-2.5-flash-image"]
+TEXT_MODELS  = ["gemini-3.1-pro-preview", "gemini-3.1-pro", "gemini-2.5-pro"]
+IMAGE_MODELS = ["gemini-nano-banana-2.1", "gemini-3.1-flash-image",
+                "gemini-3.1-flash-image-preview", "gemini-2.5-flash-image"]
 TTS_MODELS   = ["gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview",
                 "gemini-2.5-flash-preview-tts"]
 FONT = "NotoSansJP-Black.ttf"

@@ -13,3 +13,8 @@ python make_video.py "工場の安全対策"
 - `factory.jpg` がなければ初回に Gemini で生成
 - `senpai.png` / `kouhai.png`（透過PNG）を置くと立ち絵が表示され、喋っている方が声に合わせて跳ねる
 - 台本と音声は `work/` に保存
+
+## Windows で動かす
+
+1. コマンドプロンプトで `setx GEMINI_API_KEY "あなたのキー"` を実行し、ウィンドウを開き直す
+2. このフォルダの `run.bat` をダブルクリックし、テーマを入力する
