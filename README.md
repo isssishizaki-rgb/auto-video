@@ -18,3 +18,13 @@ python make_video.py "工場の安全対策"
 
 1. コマンドプロンプトで `setx GEMINI_API_KEY "あなたのキー"` を実行し、ウィンドウを開き直す
 2. このフォルダの `run.bat` をダブルクリックし、テーマを入力する
+
+## 縦型1分リール（make_reel.py）
+
+```bash
+python make_reel.py reels/tap3.json   # → reels/tap3.mp4（1080x1920）
+```
+
+- 台本は JSON（`reels/tap3.json` が例）。`text` が字幕、`say` があれば読み上げはそちらを使う（読み間違い対策）
+- `diagram` にコードで描く図の名前（`make_reel.py` の `dg_*`）を指定すると、動き付きの図解を表示
+- 音声は `GEMINI_API_KEY` があれば Gemini TTS、なければ OpenJTalk で合成

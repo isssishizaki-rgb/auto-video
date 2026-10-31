@@ -78,10 +78,10 @@ def font(size):
 
 
 def wrap(d, text, f, max_w):
-    """日本語を1文字ずつ詰めて max_w で折り返す"""
+    """日本語を1文字ずつ詰めて max_w で折り返す（句読点は行頭に来ないよう前の行に残す）"""
     lines, cur = [], ""
     for ch in text:
-        if d.textlength(cur + ch, font=f) > max_w and cur:
+        if d.textlength(cur + ch, font=f) > max_w and cur and ch not in "、。，．！？!?）」』ー…":
             lines.append(cur)
             cur = ch
         else:
